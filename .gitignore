@@ -1,0 +1,71 @@
+# ROS2 workspace
+build/
+install/
+log/
+
+# Colcon specific
+.colcon_workspace
+.colcon_build
+.colcon_install
+.colcon_log
+
+# Python
+*.pyc
+__pycache__/
+venv/
+.venv/
+
+# C++
+*.o
+*.so
+*.a
+*.lo
+*.la
+*.slo
+*.mod
+*.hi
+*.gch
+*.pch
+*.d
+*.gcno
+*.gcda
+*.gcov
+*.i
+*.s
+*.obj
+*.lib
+*.exp
+*.ilk
+*.pdb
+*.idb
+*.res
+*.exe
+*.dll
+*.manifest
+*.tds
+*.sym
+*.out
+*.map
+*.bak
+*.ipch
+
+# Editor specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.#*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Other common ignored files
+*.log
+*.tmp
+*.bak
+*.orig
+
+# Ignore vscode settings
+.vscode/
