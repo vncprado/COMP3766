@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<robot name="rr_robot">
+    <link name="map"></link>
+
+    <joint name="map_to_base" type="fixed">
+        <axis xyz="0 0 1"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="map"/>
+        <child link="base"/>
+    </joint>
+
+    <link name="base"></link>
+
+    <joint name="rev1" type="continuous">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base"/>
+        <child link="link1"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="link1"></link>
+    
+    <joint name="rev2" type="continuous">
+        <origin xyz="0.0 0.0 0.5" rpy="-1.57 -1.57 0.0"/>
+        <parent link="link1"/>
+        <child link="link2"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <link name="link2"></link>
+
+    <joint name="link2_to_ee" type="fixed">
+        <origin xyz="0.0 0.0 0.5" rpy="0.0 0.0 0.0"/>
+        <parent link="link2"/>
+        <child link="ee"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="ee"></link>
+</robot>
