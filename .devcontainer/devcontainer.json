@@ -1,0 +1,51 @@
+{
+  "name": "COMP3766 ROS2",
+  // "dockerFile": "Dockerfile",
+  "image": "vncprado/comp3766:latest",
+
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "VNC_RESOLUTION": "1920x1080",
+      "NO_VNC_SCALE": "local",
+      "nonRoot": "ubuntu"
+    },
+    
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "ubuntu",
+      "userUid": 1000,
+      "userGid": 1000
+    }
+  },
+  
+  "forwardPorts": [
+    6080
+  ],
+  
+  "portsAttributes": {
+    "6080": {
+      "label": "desktop"
+    }
+  },
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "redhat.vscode-xml",
+        "tamasfe.even-better-toml",
+        "smilerobotics.urdf",
+        "tyriar.sort-lines",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.remote-explorer",
+        "mtsmfm.vscode-stl-viewer"
+      ]
+    }
+  },
+  
+  //"runArgs": ["--memory=512m", "--cpus=1", "--net=host"],
+  "postCreateCommand": "sudo chown ubuntu:ubuntu /workspaces -R",
+  "remoteUser": "ubuntu"
+}
