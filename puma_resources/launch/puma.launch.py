@@ -5,7 +5,7 @@ from ament_index_python.packages import get_package_share_directory
 from launch.substitutions import PathJoinSubstitution
 
 def generate_launch_description():
-    pkg_share_dir = get_package_share_directory('lab2')
+    pkg_share_dir = get_package_share_directory('puma_description')
 
     urdf_file_path = os.path.join(
         pkg_share_dir,
